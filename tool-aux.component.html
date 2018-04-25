@@ -1,0 +1,19 @@
+
+<button mat-icon-button [matMenuTriggerFor]="menu" color="accent">
+    <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="deleteItem()">
+        <mat-icon color="accent">delete_forever</mat-icon>
+        <span>{{'delete'|translate}}</span>
+    </button>
+    <button mat-menu-item (click)="openEditDialog()">
+        <mat-icon color="accent">edit</mat-icon>
+        <span>{{'edit'|translate}}</span>
+    </button>
+    <button mat-menu-item (click)="openAddDialog()">
+        <mat-icon color="accent">note_add</mat-icon>
+        <span>{{'new'|translate}}</span>
+    </button>
+</mat-menu>
+
